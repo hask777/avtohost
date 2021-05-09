@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 
-class MainController extends Controller
+class StatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +13,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        // Get the cars brands names from github
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/barnds.json')
-            ->json();
-
-        // Remove first and last items
-        array_shift($cars_brands);
-        array_pop($cars_brands);
-
-        // dd($cars_brands);
-
-        return view('welcome', [
-            'cars_brands' => $cars_brands
-        ]);
+        //
     }
 
     /**
@@ -56,28 +43,9 @@ class MainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($name)
+    public function show($id)
     {
-        $name =  strtolower($name);
-        $name = str_replace(" ", "-", $name);
-        // dump($name);
-        // Get the cars brands names from github
-        $brand_cars = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'.json')
-            ->json();
-
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/barnds.json')
-            ->json();
-        // Remove first and last items
-        // dump($brand_cars);
-        array_shift($cars_brands);
-        array_pop($cars_brands);
-
-        // dump($brand_cars);
-        return view('brand', [
-            'name' => $name,
-            'cars_list' => $brand_cars,
-            'cars_brands' => $cars_brands
-        ]);
+        //
     }
 
     /**

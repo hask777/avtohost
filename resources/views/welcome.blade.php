@@ -25,5 +25,8 @@
                 </ul>       
             </div>
         </header>
+        <main class="ml-4 mr-4 mt-4">
+            @yield('content')
+        </main>
     </body>
 </html>
