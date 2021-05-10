@@ -2,7 +2,7 @@
 @section('content')
 <div class="grid grid-cols-12 gap-4">
 
-    <div class="col-span-3">
+    <div class="col-span-6">
         <div class="bg-white  p-4">
             <div>
                 <canvas id="myChart"></canvas>
@@ -93,11 +93,11 @@
             @endif
         </div>
     
-    <div class="col-span-3">
+    {{-- <div class="col-span-3">
         <div class="bg-white  p-4">
             col3
         </div>   
-    </div>
+    </div> --}}
 </div>
 
     
