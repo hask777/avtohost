@@ -1,7 +1,10 @@
 @extends('welcome')
 @section('content')
-<div class="grid grid-cols-12 gap-4">
 
+<h1 class="font-bold" id="brand">{{$name}}</h1>
+
+<div class="grid grid-cols-12 gap-4">
+    
     <div class="col-span-6">
         <div class="bg-white  p-4">
             <div>

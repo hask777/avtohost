@@ -18,9 +18,16 @@
                 <ul class="flex flex-wrap">
                     @foreach($cars_brands as $car_drand)
                         <li class="flex pl-2 pr-2 mt-2 ml-2 bg-white">
-                            <a href="/{{$car_drand['name']}}">{{$car_drand['name']}}</a>
+                            <a href="{{route('brand', $car_drand['name'])}}">{{$car_drand['name']}}</a>
                             <span>{{$car_drand['cars_count']}}</span>
                         </li>
+                        {{-- <li class="flex pl-2 pr-2 mt-2 ml-2 bg-white">
+                            <a href="{{route('getcar', $car_drand['name'])}}">{{$car_drand['name']}}</a>
+                            <span>{{$car_drand['cars_count']}}</span>
+                        </li> --}}
+                        <form action="">
+                            
+                        </form>
                     @endforeach
                 </ul>       
             </div>

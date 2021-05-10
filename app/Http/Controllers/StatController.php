@@ -14,11 +14,32 @@ class StatController extends Controller
      */
     public function index()
     {
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/new/stat.json')
+        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
             ->json();
 
-        // dump($cars_brands);
-        return $cars_brands;
+        // array_shift($cars_brands);
+        // array_pop($cars_brands);
+       
+        foreach($cars_brands as $car)
+        {
+            $name = $car['name'];
+            $name =  strtolower($name);
+            $name = str_replace(" ", "-", $name);
+
+        }
+
+        return $name;
+       
+    }
+
+    public function getBrand($name)
+    {
+        $cars_json = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'_stat.json')
+        ->json();
+
+        $carray[$name] = $cars_json;
+        return $carray;
+       
     }
 
     /**

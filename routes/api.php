@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('stat', 'StatController@index');
+// Route::get('stat/acura', 'StatController@index');
+
+Route::get('stat/{name}', 'StatController@getBrand')->name('getcar');

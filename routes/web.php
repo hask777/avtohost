@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MainController@index');
-Route::get('/{name}', 'MainController@show'); 
+Route::get('/{name}', 'MainController@show')->name('brand'); 

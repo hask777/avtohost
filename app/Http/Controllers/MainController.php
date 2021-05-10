@@ -15,12 +15,12 @@ class MainController extends Controller
     public function index()
     {
         // Get the cars brands names from github
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/barnds.json')
+        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
             ->json();
 
         // Remove first and last items
-        array_shift($cars_brands);
-        array_pop($cars_brands);
+        // array_shift($cars_brands);
+        // array_pop($cars_brands);
 
         // dd($cars_brands);
 
@@ -65,12 +65,12 @@ class MainController extends Controller
         $brand_cars = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'.json')
             ->json();
 
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/barnds.json')
+        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
             ->json();
         // Remove first and last items
         // dump($brand_cars);
-        array_shift($cars_brands);
-        array_pop($cars_brands);
+        // array_shift($cars_brands);
+        // array_pop($cars_brands);
 
         // dump($brand_cars);
         return view('brand', [

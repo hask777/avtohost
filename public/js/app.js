@@ -19396,25 +19396,35 @@ var config = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
   }
-};
-var github = 'https://raw.githubusercontent.com/hask777/avpars/new/stat.json';
-var laravel = 'http://blog.test/api/stat';
-axios.get(laravel, config).then(function (response) {
+}; // var github = 'https://raw.githubusercontent.com/hask777/avpars/main/acura_stat.json';
+// var laravel = 'http://localhost:3000/api/stat';
+
+var brand = document.getElementById('brand').innerText;
+axios.get('http://blog.test/api/stat/' + brand, config).then(function (response) {
+  // console.log(response);
   cars = response.data;
-  console.log(response.data);
-  carsYears = [];
+  console.log(cars);
+  carsYear = [];
   carsCount = [];
 
-  for (i = 0; i < cars.length; i++) {
-    carsYears.push(cars[i].car_year);
-    carsCount.push(cars[i].car_count);
+  for (car in cars) {
+    // console.log(cars[car]);
+    newCar = cars[car]; // console.log(newCar.length);
+
+    for (i = 0; i < newCar.length; i++) {
+      // console.log(newCar[i].car_year);
+      carsYear.push(newCar[i].car_year);
+      carsCount.push(newCar[i].car_count);
+    } // console.log(carsYear);
+    // console.log(carsCount);
+
   }
 
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: carsYears,
+      labels: carsYear,
       datasets: [{
         label: 'year',
         data: carsCount,
