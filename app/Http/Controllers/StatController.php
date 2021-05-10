@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Http;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +14,11 @@ class StatController extends Controller
      */
     public function index()
     {
-        //
+        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/new/stat.json')
+            ->json();
+
+        // dump($cars_brands);
+        return $cars_brands;
     }
 
     /**

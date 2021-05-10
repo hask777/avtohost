@@ -4,7 +4,9 @@
 
     <div class="col-span-3">
         <div class="bg-white  p-4">
-            col1
+            <div>
+                <canvas id="myChart"></canvas>
+              </div>
         </div>
     </div>
    
