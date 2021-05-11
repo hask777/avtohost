@@ -22,3 +22,4 @@ use Illuminate\Support\Facades\Http;
 // Route::get('stat/acura', 'StatController@index');
 
 Route::get('stat/{name}', 'StatController@getBrand')->name('getcar');
+Route::get('stat/vol/{name}', 'StatController@getVol')->name('getvol');

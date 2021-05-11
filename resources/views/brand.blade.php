@@ -6,9 +6,14 @@
 <div class="grid grid-cols-12 gap-4">
     
     <div class="col-span-6">
-        <div class="bg-white  p-4">
+        <div class="bg-white rounded p-4 shadow">
             <div>
                 <canvas id="myChart"></canvas>
+              </div>
+        </div>
+        <div class="bg-white rounded p-4 mt-4 shadow">
+            <div>
+                <canvas id="volume" ></canvas>
               </div>
         </div>
     </div>
@@ -16,7 +21,7 @@
         <div class="col-span-6">
             @if(!empty($cars_list))
                 @foreach($cars_list as $car)    
-                    <div class="grid grid-cols-12 gap-2 bg-white p-4 mb-4">
+                    <div class="grid grid-cols-12 gap-2 bg-white p-4 mb-4 rounded shadow">
                         
                             <h1 class="col-span-4 font-bold">{{$car['title']}}</h1>
                             <div class="col-span-8">

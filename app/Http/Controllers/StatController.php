@@ -42,6 +42,15 @@ class StatController extends Controller
        
     }
 
+    public function getVol($name)
+    {
+        $cars_json = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'_vol_stat.json')
+        ->json();
+
+        $carray[$name] = $cars_json;
+        return $carray;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
