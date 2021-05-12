@@ -19400,7 +19400,7 @@ var config = {
 // var laravel = 'http://localhost:3000/api/stat';
 
 var brand = document.getElementById('brand').innerText;
-axios.get('http://blog.test/api/stat/' + brand, config).then(function (response) {
+axios.get('http://fast-beach-07156.herokuapp.com/api/stat/' + brand, config).then(function (response) {
   // console.log(response);
   cars = response.data; // console.log(cars);
 
@@ -19459,7 +19459,7 @@ axios.get('http://blog.test/api/stat/' + brand, config).then(function (response)
 // var laravel = 'http://localhost:3000/api/stat';
 // const brand = document.getElementById('brand').innerText;
 
-axios.get('http://blog.test/api/stat/vol/' + brand, config).then(function (response) {
+axios.get('http://fast-beach-07156.herokuapp.com/api/stat/vol/' + brand, config).then(function (response) {
   // console.log(response);
   volume = response.data;
   console.log(volume);
