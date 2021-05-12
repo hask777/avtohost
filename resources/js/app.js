@@ -12,7 +12,7 @@ const config = {
 
 const brand = document.getElementById('brand').innerText;
 
-axios.get('http://blog.test/api/stat/' + brand, config)
+axios.get('http://fast-beach-07156.herokuapp.com/api/stat/' + brand, config)
 .then((response) => {
     // console.log(response);
     cars = response.data;
@@ -84,7 +84,7 @@ axios.get('http://blog.test/api/stat/' + brand, config)
 
 // const brand = document.getElementById('brand').innerText;
 
-axios.get('http://blog.test/api/stat/vol/' + brand, config)
+axios.get('http://fast-beach-07156.herokuapp.com/api/stat/vol/' + brand, config)
 .then((response) => {
     // console.log(response);
     volume = response.data;
