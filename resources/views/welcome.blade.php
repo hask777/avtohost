@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body class="bg-gray-300">
         <header class="bg-gray-700 pl-2 pr-2 flex">
@@ -39,7 +39,7 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
+    <script src="{{ secure_asset('js/main.js') }}"></script>
   
 </html>
