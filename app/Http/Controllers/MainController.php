@@ -15,8 +15,12 @@ class MainController extends Controller
     public function index()
     {
         // Get the cars brands names from github
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
+        // $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
+        //     ->json();
+
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com')
             ->json();
+        // dd($cars_brands);
 
         // Remove first and last items
         // array_shift($cars_brands);
@@ -65,7 +69,7 @@ class MainController extends Controller
         $brand_cars = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'.json')
             ->json();
 
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com/')
             ->json();
         // Remove first and last items
         // dump($brand_cars);

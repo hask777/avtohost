@@ -14,7 +14,7 @@ class StatController extends Controller
      */
     public function index()
     {
-        $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com')
             ->json();
 
         // array_shift($cars_brands);
