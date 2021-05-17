@@ -14,8 +14,8 @@ class StatController extends Controller
      */
     public function index()
     {
-        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com')
-            ->json();
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com/cars-brands')
+            ->json()['made'];
 
         // array_shift($cars_brands);
         // array_pop($cars_brands);

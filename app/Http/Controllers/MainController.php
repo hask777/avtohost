@@ -18,8 +18,12 @@ class MainController extends Controller
         // $cars_brands = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/brands.json')
         //     ->json();
 
-        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com')
-            ->json();
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com/cars-brands')
+            ->json()['made'];
+        // dd($cars_brands);
+
+        // $cars_brands = Http::post('https://dbf4665e5f39.ngrok.io/abc')
+        //     ->json()['data'];
         // dd($cars_brands);
 
         // Remove first and last items
@@ -66,11 +70,11 @@ class MainController extends Controller
         $name = str_replace(" ", "-", $name);
         // dump($name);
         // Get the cars brands names from github
-        $brand_cars = Http::get('https://raw.githubusercontent.com/hask777/avpars/main/'.$name.'.json')
-            ->json();
+        $brand_cars = Http::get('https://cars-test-fastapi.herokuapp.com/getcars/'.$name)
+            ->json()['cars'];
 
-        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com/')
-            ->json();
+        $cars_brands = Http::get('http://brands-test-fastapi.herokuapp.com/cars-brands')
+            ->json()['made'];
         // Remove first and last items
         // dump($brand_cars);
         // array_shift($cars_brands);
