@@ -1,7 +1,12 @@
 @extends('welcome')
 @section('content')
 
-<h1 class="font-bold" id="brand">{{$name}}</h1>
+<h1 class="font-bold" id="brand">
+    @if($name == 'Lada (ВАЗ)')
+        {{$name = str_replace(" (ВАЗ)", " ", $name);}}
+    @endif
+        {{$name}}
+</h1>
 
 <div class="grid grid-cols-12 gap-4">
     
