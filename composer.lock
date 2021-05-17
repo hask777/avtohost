@@ -7,13 +7,6 @@
     "content-hash": "8620c84f499e8dbb989e4d176f94a8b9",
     "packages": [
         {
-            "name": "alexeymezenin/laravel-russian-slugs",
-            "version": "0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alexeymezenin/laravel-russian-slugs.git",
-                "reference": "f83a7ecd47588a3e8c7f747ba44728e87c523e82"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/alexeymezenin/laravel-russian-slugs/zipball/f83a7ecd47588a3e8c7f747ba44728e87c523e82",
