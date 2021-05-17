@@ -41,7 +41,12 @@ function transliterate($textcyr = null, $textlat = null) {
         <div class="car_brands pl-2 pr-2">
             <ul class="flex flex-wrap">
                 @foreach($cars_brands as $car_drand)
-               
+                    @php 
+                        if ($car_drand['name'] == 'Lada (ВАЗ)'){
+                            $car_drand['name'] = str_replace(" (ВАЗ)", "", $car_drand['name']);
+                        }          
+                    @endphp
+
                         <li class="flex pl-2 pr-2 mt-2 ml-2 bg-white items-center rounded shadow">
                             <a href="{{ route('brand', transliterate($car_drand['name'])) }}" class="font-semibold capitalize">{{$car_drand['name']}}</a>
                             <span class="ml-2  text-sm">{{$car_drand['count']}}</span>

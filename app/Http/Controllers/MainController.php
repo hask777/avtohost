@@ -22,16 +22,6 @@ class MainController extends Controller
             ->json()['made'];
         // dd($cars_brands);
 
-        // $cars_brands = Http::post('https://dbf4665e5f39.ngrok.io/abc')
-        //     ->json()['data'];
-        // dd($cars_brands);
-
-        // Remove first and last items
-        // array_shift($cars_brands);
-        // array_pop($cars_brands);
-
-        // dd($cars_brands);
-
         return view('welcome', [
             'cars_brands' => $cars_brands
         ]);
