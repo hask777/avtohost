@@ -4,51 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8620c84f499e8dbb989e4d176f94a8b9",
+    "content-hash": "7aa6df30a1ec85bae8d498aa7d7e5e89",
     "packages": [
-        {
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/alexeymezenin/laravel-russian-slugs/zipball/f83a7ecd47588a3e8c7f747ba44728e87c523e82",
-                "reference": "f83a7ecd47588a3e8c7f747ba44728e87c523e82",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "AlexeyMezenin\\LaravelRussianSlugs\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexey Mezenin",
-                    "email": "alexeymezenin@gmail.com"
-                }
-            ],
-            "description": "Russian SEO friendly slugs for Laravel 5",
-            "keywords": [
-                "cyrillic",
-                "google",
-                "russian",
-                "seo",
-                "slugs",
-                "translit",
-                "url",
-                "yandex"
-            ],
-            "support": {
-                "issues": "https://github.com/alexeymezenin/laravel-russian-slugs/issues",
-                "source": "https://github.com/alexeymezenin/laravel-russian-slugs/tree/0.9"
-            },
-            "time": "2016-04-27T12:40:09+00:00"
-        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
